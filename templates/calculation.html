@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<main>
+    <div class="content">
+        <h1>ライトノベル判定</h1>
+        <form action="/calc" method="POST">
+            <p>
+                <label><span>文章を入力してください</span>
+                    <input type="text" name="txt">
+                </label>
+            </p>
+            <div class="calc_btn">
+                <input type="submit" value='判定する'>
+            </div>
+        </form>
+    </div>
+
+    <div class="box">
+        <p>結果は</p>
+        <h2 class="result"> {{result}}</h2>
+    </div>
+</main>
+
+{% endblock %}
